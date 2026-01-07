@@ -34,3 +34,35 @@ td {
     padding: 12px;
     border-bottom: 1px solid #30363d;
 }
+/* Media Query untuk HP/Tablet */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 90%;
+        /* Biar gak mentok pinggir layar HP */
+        padding: 10px;
+    }
+
+    .input-section {
+        display: flex;
+        flex-direction: column;
+        /* Input jadi berderet ke bawah di HP */
+    }
+
+    input,
+    button {
+        margin: 5px 0;
+        width: 100%;
+        /* Biar tombol & input selebar layar HP */
+        box-sizing: border-box;
+    }
+
+    table {
+        font-size: 12px;
+        /* Perkecil font tabel biar muat */
+    }
+
+    th,
+    td {
+        padding: 8px 4px;
+    }
+}
