@@ -34,35 +34,70 @@ td {
     padding: 12px;
     border-bottom: 1px solid #30363d;
 }
-/* Media Query untuk HP/Tablet */
+/* Media Query untuk HP yang lebih cantik */
 @media screen and (max-width: 600px) {
     .container {
-        width: 90%;
-        /* Biar gak mentok pinggir layar HP */
-        padding: 10px;
+        width: 92%;
+        padding: 15px;
+        margin: 10px;
     }
 
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Input section jadi rapi ke bawah */
     .input-section {
         display: flex;
         flex-direction: column;
-        /* Input jadi berderet ke bawah di HP */
+        gap: 10px;
+        /* Kasih jarak antar elemen */
+        align-items: center;
     }
 
-    input,
-    button {
-        margin: 5px 0;
+    /* Kalender & Input Text biar gak kegedean tapi pas */
+    #todo-input,
+    #todo-date {
         width: 100%;
-        /* Biar tombol & input selebar layar HP */
+        max-width: 300px;
+        /* Batasi biar gak terlalu lebar */
+        padding: 12px;
+        font-size: 14px;
         box-sizing: border-box;
     }
 
-    table {
-        font-size: 12px;
-        /* Perkecil font tabel biar muat */
+    /* Tanda Tambah (+) dibuat bulet & cantik */
+    #add-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        /* Buat jadi bulet */
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
     }
 
-    th,
-    td {
-        padding: 8px 4px;
+    /* Tombol Filter & Delete All sejajar kecil */
+    .action-buttons {
+        display: flex;
+        justify-content: space-around;
+        gap: 5px;
     }
+
+    .action-buttons button {
+        flex: 1;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    /* Tabel dibuat bisa scroll samping biar gak berantakan */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
 }
