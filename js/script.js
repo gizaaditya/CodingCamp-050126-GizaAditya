@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   addBtn.onclick = () => {
     // Cek jika input kosong
     if (todoInput.value.trim() === "" || todoDate.value === "") {
-      alert("Waduh bro, isi dulu tugas sama tanggalnya! Jangan dikosongin ya.");
+      alert("Waduh, isi dulu tugas sama tanggalnya! Jangan dikosongin ya.");
       return;
     }
 
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
   deleteAllBtn.onclick = () => {
     // Cek jika emang gak ada data (hanya ada pesan "no-data")
     if (todoList.querySelector("#no-data")) {
-      alert("List udah kosong, bro!");
+      alert("List udah kosong!");
       return;
     }
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const rows = Array.from(todoList.querySelectorAll("tr:not(#no-data)"));
 
     if (rows.length === 0) {
-      alert("Gak ada data buat difilter, bro!");
+      alert("Gak ada data buat difilter!");
       return;
     }
 
